@@ -80,12 +80,10 @@ function mapStateToProps(state){
         books: state.books.books
     }
 }
-
 function mapDispatchToProps(dispatch){
     return bindActionCreators({
-            postBooks,
-            deleteBooks
-        }, dispatch)
+        postBooks,
+        deleteBooks
+    }, dispatch)
 }
-
 export default connect(mapStateToProps, mapDispatchToProps)(BooksForm);
