@@ -19,7 +19,7 @@ class BooksList extends React.Component{
             return (
                 <Col xs={12} sm={6} md={4} key={booksArr.id}>
                     <BookItem
-                        id={booksArr.id}
+                        _id={booksArr.id}
                         title={booksArr.title}
                         description={booksArr.description}
                         price={booksArr.price} />

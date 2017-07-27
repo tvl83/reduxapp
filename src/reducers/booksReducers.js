@@ -5,13 +5,13 @@ export function booksReducers(state={
     books:
     [
         {
-            id: 1,
+            _id: 1,
             title: 'book title',
             description: 'book description',
             price: 100.00
         },
         {
-            id: 2,
+            _id: 2,
             title: '2nd book title',
             description: '2nd book description',
             price: 15.00
@@ -33,7 +33,7 @@ export function booksReducers(state={
             // find at which index in books array is the book to be deleted.
             const indexToDelete = currentBookToDelete.findIndex(
                 function(book){
-                    return book.id === action.payload.id;
+                    return book._id === action.payload._id;
                 }
             );
             // use slice to remove the book at the specified index
@@ -45,7 +45,7 @@ export function booksReducers(state={
             // find index of book to update
             const indexToUpdate = currentBookToUpdate.findIndex(
                 function(book){
-                    return book.id === action.payload.id;
+                    return book._id === action.payload._id;
                 }
             );
             // create new book object with new values and with the same array index of the item we want to replace
