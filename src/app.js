@@ -17,6 +17,7 @@ const middleware = applyMiddleware(logger);
 const store = createStore(reducers, middleware);
 
 import BooksList from './components/pages/booksList';
+import BookItem from './components/pages/bookItem';
 
 render (
     <Provider store={store}>
